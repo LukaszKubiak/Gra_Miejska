@@ -1,0 +1,27 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Gra_Miejska.WinPhone" EntryPointType="Gra_Miejska.WinPhone.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Gra_Miejska.WinPhone" Source="Gra_Miejska.WinPhone.dll" />
+    <AssemblyPart x:Name="Acr.BarCodes" Source="Acr.BarCodes.dll" />
+    <AssemblyPart x:Name="Acr.BarCodes.Interface" Source="Acr.BarCodes.Interface.dll" />
+    <AssemblyPart x:Name="Gra_Miejska" Source="Gra_Miejska.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
+    <AssemblyPart x:Name="PCLCrypto" Source="PCLCrypto.dll" />
+    <AssemblyPart x:Name="Plugin.Geolocator.Abstractions" Source="Plugin.Geolocator.Abstractions.dll" />
+    <AssemblyPart x:Name="Plugin.Geolocator" Source="Plugin.Geolocator.dll" />
+    <AssemblyPart x:Name="System.Net.Http" Source="System.Net.Http.dll" />
+    <AssemblyPart x:Name="System.Net.Http.Extensions" Source="System.Net.Http.Extensions.dll" />
+    <AssemblyPart x:Name="System.Net.Http.Primitives" Source="System.Net.Http.Primitives.dll" />
+    <AssemblyPart x:Name="Validation" Source="Validation.dll" />
+    <AssemblyPart x:Name="WriteableBitmapExWinPhone" Source="WriteableBitmapExWinPhone.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Core" Source="Xamarin.Forms.Core.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Maps" Source="Xamarin.Forms.Maps.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Maps.WP8" Source="Xamarin.Forms.Maps.WP8.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Platform" Source="Xamarin.Forms.Platform.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Platform.WP8" Source="Xamarin.Forms.Platform.WP8.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Xaml" Source="Xamarin.Forms.Xaml.dll" />
+    <AssemblyPart x:Name="zxing.wp8.0" Source="zxing.wp8.0.dll" />
+    <AssemblyPart x:Name="ZXingNetMobile" Source="ZXingNetMobile.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+  </Deployment.Parts>
+</Deployment>
