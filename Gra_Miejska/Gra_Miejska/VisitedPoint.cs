@@ -10,6 +10,7 @@ namespace Gra_Miejska
     {
         public int UserID { get; set; }
         public int Point_nr { get; set; }
+        public string Name { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
     }

@@ -41,7 +41,7 @@ namespace Gra_Miejska
             return point;
 
         }
-        public static async Task<List<VisitedPoint>> GetPointsAsync(int Uid)
+        public static async Task<List<VisitedPoint>> GetVisitedAsync(int Uid)
         {
             var client = new HttpClient();
             var response = await client.GetAsync("https://restgra.herokuapp.com/visited/" + Uid.ToString());
@@ -54,13 +54,13 @@ namespace Gra_Miejska
             return point;
 
         }
-        public static async Task PutVisitedAsync(int Uid, int Pid)
+        public static async Task PutVisitedAsync(int Uid, int Pid, string Name)
         {
             var client = new HttpClient();            
             string content = "";
             var cont = new StringContent(content);
             HttpResponseMessage response = null;
-            response = await client.PutAsync("https://restgra.herokuapp.com/visited/" + Uid.ToString() + ";" + Pid.ToString(), cont);
+            response = await client.PutAsync("https://restgra.herokuapp.com/visited/" + Uid.ToString() + ";" + Pid.ToString()+";"+Name, cont);
         }
         
     }

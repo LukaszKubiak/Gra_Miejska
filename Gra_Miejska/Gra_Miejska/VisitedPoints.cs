@@ -8,6 +8,6 @@ namespace Gra_Miejska
 {
     class VisitedPoints
     {
-        public static List<Point> visitedPoints = new List<Point>();
+        public static List<VisitedPoint> visitedPoints = new List<VisitedPoint>();
     }
 }

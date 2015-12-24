@@ -70,15 +70,14 @@ namespace Gra_Miejska
                     }
                     else
                     {
-                        VisitedPoints.visitedPoints.Add(point[0]);
-
+                        
                         current = await GetLocationAsync();
                         double lat1 = current.Latitude - point[0].Latitude;
                         double long1 = current.Longnitude - point[0].Longnitude;
                         var distance = GPSPoint.countDistance(current.Latitude,point[0].Latitude,current.Longnitude,point[0].Longnitude);
                         if (distance < 0.03)
                         {
-                            await ApiWebServices.PutVisitedAsync(CurrentUser.currentUser.UserId, point[0].Point_nr);
+                            await ApiWebServices.PutVisitedAsync(CurrentUser.currentUser.UserId, point[0].Point_nr,point[0].Name);
                            await Navigation.PushAsync(new PointDisplay(point[0]));
                         }
                         else
@@ -92,7 +91,7 @@ namespace Gra_Miejska
             };
             Exit.Clicked += Exit_Clicked;
             Map.Clicked += Map_Clicked;
-           
+            Points.Clicked += Points_Clicked;
             Content = new ScrollView
             {
                 
@@ -115,6 +114,11 @@ namespace Gra_Miejska
 				}
                 }
             };
+        }
+
+        void Points_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PointsList());
         }
         public async Task<GPSPoint>  GetLocationAsync()
         {

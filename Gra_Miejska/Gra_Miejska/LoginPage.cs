@@ -114,6 +114,11 @@ namespace Gra_Miejska
                         if(u[0].Password.ToUpper() == hashed_password)
                         {
                             CurrentUser.currentUser = u[0];
+                            var points = await ApiWebServices.GetVisitedAsync(u[0].UserId);
+                            foreach (var item in points)
+                            {
+                                VisitedPoints.visitedPoints.Add(item);
+                            }
 
                             await Navigation.PushAsync(new Menu());
                         }

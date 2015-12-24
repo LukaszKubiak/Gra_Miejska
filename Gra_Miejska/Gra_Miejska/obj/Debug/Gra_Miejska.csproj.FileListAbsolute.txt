@@ -32,5 +32,3 @@ C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gr
 C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska\bin\Debug\Plugin.Geolocator.xml
 C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska\bin\Debug\Plugin.Geolocator.Abstractions.pdb
 C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska\bin\Debug\Plugin.Geolocator.Abstractions.xml
-C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska\obj\Debug\Gra_Miejska.dll.mdb
-C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska\bin\Debug\Gra_Miejska.dll.mdb
