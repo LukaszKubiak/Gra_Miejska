@@ -11,6 +11,7 @@ namespace Gra_Miejska
     {
         public double Latitude { get; set; }
         public double Longnitude { get; set; }
+        public int UserId { get; set; }
         public static double ConvertToRadians(double angle)
         {
             return (Math.PI / 180) * angle;

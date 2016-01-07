@@ -18,9 +18,14 @@ namespace Gra_Miejska
     {
         Button login, exit;
         public Entry log, password;
-        
+        ActivityIndicator activity;
+        StackLayout entries, buttons,cont;
         public LoginPage()
         {
+            activity = new ActivityIndicator
+            {
+                Color = Color.Gray,                
+            };
             CurrentUser.currentUser = new User();
             Style = (Style)Styles.styles["siteStyle"];
             login = new Button
@@ -52,45 +57,51 @@ namespace Gra_Miejska
                 IsPassword = true
             };
             exit.Clicked += OnButtonClicked;
-
-            this.Content = new StackLayout
-            {
-
-                Children =
-                { 
-                    new StackLayout
+            entries = new StackLayout
                     {
                         Orientation = StackOrientation.Vertical,
                         VerticalOptions = LayoutOptions.EndAndExpand,
                         Spacing = 15,
                         Padding = new Thickness(50, 10, 50, 10),
-                        Children=
+                        Children =
                         {
                             log,
                             password
                         }
-                        
-                    },
-                    new StackLayout
+
+                    };
+            buttons = new StackLayout
                         {
-                            Orientation = StackOrientation.Vertical,                            
+                            Orientation = StackOrientation.Vertical,
                             VerticalOptions = LayoutOptions.StartAndExpand,
                             Spacing = 15,
-                            Children=
+                            Children =
                             {
                                 login,
                                 exit                              
 
                             }
-                        }
+                        };
+            cont = new StackLayout
+            {
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                Children =
+                {
+                    entries,buttons
+
                 }
             };
+            this.Content = cont;
             
            
         }
         
            async void OnButtonClicked(object sender, EventArgs args)
             {
+                activity.IsRunning = true;                
+                cont.Children.Clear();
+                cont.Children.Add(activity);
+               
                 
                 Button button = (Button)sender;
                 if(button == login)
@@ -101,36 +112,33 @@ namespace Gra_Miejska
                     var u = await ApiWebServices.GetUserAsync(log.Text);
                     if(u.Count == 0)
                     {
-                        var result = await DisplayActionSheet("Błędny login lub hasło!", "Spróbuj ponownie", "OK");
-                        if (result == "OK")
-                        {}
-                        else if (result == "Spróbuj ponownie")
-                        {
-                            OnButtonClicked(sender, args);
-                        }
+                        
+                        await this.DisplayAlert("Błąd!", "Błędny login lub Hasło. Spróbuj ponownie.", "OK");
+                        cont.Children.Clear();
+                        cont.Children.Add(entries);
+                        cont.Children.Add(buttons);
                     }
                     else
                     {
                         if(u[0].Password.ToUpper() == hashed_password)
                         {
+                            VisitedPoints.visitedPoints = await ApiWebServices.GetVisitedAsync(u[0].UserId);
                             CurrentUser.currentUser = u[0];
-                            var points = await ApiWebServices.GetVisitedAsync(u[0].UserId);
-                            foreach (var item in points)
-                            {
-                                VisitedPoints.visitedPoints.Add(item);
-                            }
-
+                            
+                            
+                            
                             await Navigation.PushAsync(new Menu());
+                            cont.Children.Clear();
+                            cont.Children.Add(entries);
+                            cont.Children.Add(buttons);
                         }
                         else
                         {
-                            var result = await DisplayActionSheet("Błędny login lub hasło!", "Spróbuj ponownie", "OK");
-                            if (result == "OK")
-                            { }
-                            else if (result == "Spróbuj ponownie")
-                            {
-                                OnButtonClicked(sender, args);
-                            }
+                            
+                            await this.DisplayAlert("Błąd!", "Błędny login lub Hasło. Spróbuj ponownie.", "OK");
+                            cont.Children.Clear();
+                            cont.Children.Add(entries);
+                            cont.Children.Add(buttons);
                         }
                         
                     }
@@ -139,7 +147,11 @@ namespace Gra_Miejska
                 }
                 else if(button == exit)
                 {
+                    
                     await Navigation.PopAsync();
+                    cont.Children.Clear();
+                    cont.Children.Add(entries);
+                    cont.Children.Add(buttons);
                 }
                 
                 
@@ -153,9 +165,9 @@ namespace Gra_Miejska
             {
                 log.Text = "";
                 password.Text = "";
-                log.Text = CurrentUser.currentUser.Login;
                 base.OnAppearing();
             }
+            
 
             
     }

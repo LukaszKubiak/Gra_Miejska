@@ -39,6 +39,7 @@
     <Compile Include="CurrentUser.cs" />
     <Compile Include="Encryption.cs" />
     <Compile Include="GPSPoint.cs" />
+    <Compile Include="GPSReader.cs" />
     <Compile Include="LoginPage.cs" />
     <Compile Include="MapPage.cs" />
     <Compile Include="Menu.cs" />

@@ -65,5 +65,6 @@ C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gr
 C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska.Droid\bin\Debug\Plugin.Geolocator.Abstractions.dll.mdb
 C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska.Droid\bin\Debug\Plugin.Permissions.dll.mdb
 C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska.Droid\bin\Debug\Plugin.Permissions.Abstractions.dll.mdb
+C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska.Droid\bin\Debug\Gra_Miejska.dll.mdb
 C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska.Droid\obj\Debug\Gra_Miejska.Droid.dll.mdb
 C:\Users\Lukasz\Documents\Visual Studio 2013\Projects\Gra_Miejska\Gra_Miejska\Gra_Miejska.Droid\bin\Debug\Gra_Miejska.Droid.dll.mdb
