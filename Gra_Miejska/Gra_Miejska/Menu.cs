@@ -42,6 +42,8 @@ namespace Gra_Miejska
             {
                 Style = (Style)Styles.styles["buttonStyle"],
                 Text = "Zeskanuj kod"
+                
+                
             };
             Points = new Button
             {
@@ -77,8 +79,9 @@ namespace Gra_Miejska
                 this.Content = act;
                 if (!scanResult.Success)   
                 {
+                    
                     this.Content = scroll;
-                    await this.DisplayAlert("Alert ! ", "Sorry ! \n Failed to read the Barcode !", "OK");  
+                    //await this.DisplayAlert("Alert ! ", "Uwaga! \n Nie udało  !", "OK");  
                 }   
                 else   
                 {  

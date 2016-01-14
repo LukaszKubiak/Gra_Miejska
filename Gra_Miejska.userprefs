@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="Gra_Miejska\Gra_Miejska.Droid\Gra_Miejska.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Jelly Bean)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gra_Miejska\Gra_Miejska.iOS\Info.plist">
+    <Files>
+      <File FileName="Gra_Miejska\Gra_Miejska.iOS\Info.plist" Line="24" Column="39" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

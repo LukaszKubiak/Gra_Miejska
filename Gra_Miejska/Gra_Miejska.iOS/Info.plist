@@ -20,6 +20,10 @@
       <string>UIInterfaceOrientationLandscapeLeft</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+	<string>You are about to use location!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This will be called if location is used behind the scenes</string>
     <key>MinimumOSVersion</key>
     <string>6.0</string>
     <key>CFBundleDisplayName</key>

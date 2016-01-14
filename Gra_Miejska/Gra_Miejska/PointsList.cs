@@ -54,9 +54,9 @@ namespace Gra_Miejska
                 btn.Style = (Style)Styles.styles["buttonStyle"];
                 
                 btn.Clicked += delegate {
-                    this.Content = act;
+                    scroll.Content = act;
                     NavigateTo(item.Point_nr);
-                    this.Content = scroll;
+                    scroll.Content = stack;
 
                 };
                 

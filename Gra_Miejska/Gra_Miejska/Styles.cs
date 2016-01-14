@@ -54,7 +54,7 @@ namespace Gra_Miejska
                         new Setter 
                         { 
                             Property = Button.WidthRequestProperty, 
-                            Value = 300
+                            Value = 320
                         }
                     }
                     
